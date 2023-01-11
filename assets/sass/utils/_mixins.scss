@@ -1,0 +1,56 @@
+@import "../Utils/variables";
+
+//\\//
+
+@media screen and (max-width: 1620px) {
+  main {
+    margin-left: auto;
+    margin-right: auto;
+    & header > aside {
+      & > .fa-search {
+        margin-left: 1385px;
+        margin-top: -1.5em;
+        margin-bottom: 0.5em;
+        position: initial;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  main {
+    & header > aside {
+      & > .fa-search {
+        display: block;
+      }
+    }
+    & > section.recipes-section {
+      justify-content: center;
+      & > article > aside {
+        bottom: calc(-100% + 180px);
+        height: 180px;
+        & > h2 {
+          max-width: 57%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  section.recipes-section > article {
+    min-width: 110px;
+    height: auto;
+    & > aside {
+      flex-direction: row;
+
+      & > h2 {
+        width: 85%;
+      }
+
+      & > .ingrédients, .description {
+        // display: flex;
+        min-width: 60px;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+
+// SASS Variables
+$body-bg-color: white;
+
+$color-primary: #E7E7E7;
+$color-secondary: #3282F7;
+$color-tertiary:#68D9A4;
+$color-quaternary: #ED6454;
+$color-quinary: #C7BEBE;
+
+// Fonts
+$police1: 'Lato';
+$police2: 'Roboto';
+
+//CSS Variables
+:root {
+    // Color variables
+    --color-primary:#{$color-primary};
+    --color-secondary:#{$color-secondary};
+    --color-tertiary:#{$color-tertiary};
+    --color-quaternary:#{$color-quaternary};
+    --color-quinary:#{$color-quinary};
+
+    --body-bg-color:#{$body-bg-color};
+
+    // Fonts
+    --font-main:#{$police1};
+    --font-secondary:#{$police2};
+}
