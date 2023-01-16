@@ -44,10 +44,10 @@ const dataFactory = () => {
 
     /**
      * initTagAppareil - initialise le tag appareil de la recette dans le tableau arrayTagAppareils
-     * @param  {String} tagAppareil tag appareil de la recette
+     * @param  {String} tagAppliance tag appareil de la recette
      */
-    const initTagAppareil = (tagAppareil) => {
-        arrayTagAppareils.push(tagAppareil);
+    const initTagAppareil = (tagAppliance) => {
+        arrayTagAppareils.push(tagAppliance);
     };
 
     /**
@@ -262,13 +262,13 @@ const dataFactory = () => {
     /**
      * filtreRecetteAppareil - filtre le tableau arrayAppareils en function des valeurs dans le tableau arrayTagAppareils
      * @param  {Array} array tableau contenant les recettes a filtrer
-     * @param  {String} tagAppareil valeur tag appareil
+     * @param  {String} tagAppliance valeur tag appareil
      * @returns {Array} renvoie le tableau resultSearch contenant les résultats filtrés
      */
-    const filtreRecetteAppareil = (array, tagAppareil) => {
+    const filtreRecetteAppareil = (array, tagAppliance) => {
         let resultSearch = [];
         for (let i = 0; i < array.length; i++) {
-            if (array[i].appliance.toLowerCase().includes(tagAppareil)) resultSearch.push(array[i]);
+            if (array[i].appliance.toLowerCase().includes(tagAppliance)) resultSearch.push(array[i]);
         }
         return resultSearch;
     };
@@ -408,7 +408,7 @@ const initHtmlRecettes = (data = false) => {
             htmlRecetteIngredients += `${data[i].ingredients[y].ingredient}: ${ingredientQuantity} ${ingredientUnit}<br>`;
         }
         htmlRecettes += `<article tabindex="0"><aside><h2 title="${data[i].name}">${data[i].name}</h2>
-        <p class="time"><i class="far fa-clock"></i> ${data[i].time} min</p>
+        <p class="time"><i class="fa-regular fa-clock"></i> ${data[i].time} min</p>
         <p class="ingrédients" title="${htmlRecetteIngredients}">${htmlRecetteIngredients}</p>
         <p class="description" title="${data[i].description}">${data[i].description}</p></aside></article>`;
     }
@@ -426,10 +426,6 @@ const displayListRecettes = (htmlRecettes) => {
     icone.style.marginLeft = '0em';
     icone.style.marginBottom = '0.5em';
     icone.style.transform = 'rotate(0deg)  scale(1)';
-    setTimeout(() => {
-        // section1.style.opacity = 1;
-        // section2.style.opacity = 1;
-    }, 1000);
 };
 
 /**
@@ -503,26 +499,23 @@ const displayListFiltre = (arrayList, idElement) => {
     });
 
     idElement.innerHTML = htmlListFiltre;
-    console.log(idElement);
+
 };
 
 /**
  * handleDivList - ouvre le div list lorsque que l'élément est click ou keypress
  */
 const handleDivList = () => {
-    console.log('clicked');
     arrayEvent.forEach(event => {
-        [divIngredient, divAppareil, divUstensile].forEach(element => {
-            console.log(element);
+        [ingredients, appliances, ustensils].forEach(element => {
             element.querySelector('.fa-chevron-up').addEventListener(event, () => {
-                if(element.style.width === '87px') {
+                if(element.style.width === '140px') {
                     // On ferme tous les divList
                     for (let i = 0; i < 3; i++) {
-                        let divList = section1.querySelectorAll('.divList')[i];
-                        divList.style.width = '87px';
+                        let divList = section1.querySelectorAll('.tagList')[i];
+                        divList.style.width = '140px';
                         divList.style.minWidth = 'initial';
-                        divList.style.height = '19.7px';
-                        divList.style.filter = 'brightness(100%)';
+                        divList.style.height = '50px';
                         divList.querySelector('.fa-chevron-up').style.transform = 'rotate(180deg)';
                         divList.querySelector('div').style.display = 'none';
                     }
@@ -534,15 +527,11 @@ const handleDivList = () => {
                     element.style.height = '251px';
                     if (element === divIngredient) {
                         element.querySelector('span').innerHTML = '<input type="search" placeholder="Rechercher un ingédient" aria-label="Rechercher un ingédient" name="searchIngredient" id="searchIngredient" class="searchInputList">';
-                        console.log(element);
                     } else if (element === divAppareil) {
                         element.querySelector('span').innerHTML = '<input type="search" placeholder="Rechercher un appareil" aria-label="Rechercher un appareil" name="searchAppareil" id="searchAppareil" class="searchInputList">';
-                        console.log(element);
                     } else if (element === divUstensile) {
                         element.querySelector('span').innerHTML = '<input type="search" placeholder="Rechercher un ustensile" aria-label="Rechercher un ustensile" name="searchUstensile" id="searchUstensile" class="searchInputList">';
-                        console.log(element);
                     }
-                    element.style.filter = 'brightness(95%)';
                     element.querySelector('.fa-chevron-up').style.transform = 'rotate(0deg)';
                     element.querySelector('div').style.display = 'flex';
                 } else {
@@ -558,13 +547,13 @@ const handleDivList = () => {
  * @param  {Array} element élément html du dom
  */
 const closeDivList = (element) => {
-    divIngredient.querySelector('span').textContent = 'Ingédients';
+    divIngredient.querySelector('span').textContent = 'Ingrédients';
     divAppareil.querySelector('span').textContent = 'Appareils';
     divUstensile.querySelector('span').textContent = 'Ustensiles';
-    element.style.width = '87px';
+    element.style.width = '140px';
     element.style.minWidth = 'initial';
-    element.style.height = '19.7px';
-    element.style.filter = 'brightness(100%)';
+    element.style.height = '50px';
+    console.log('closed');
     element.querySelector('.fa-chevron-up').style.transform = 'rotate(180deg)';
     element.querySelector('div').style.display = 'none';
 };
@@ -621,8 +610,8 @@ const addTagIngredient = () => {
             tagIngredient.addEventListener(event, () => {
                 const arrayListTagIngredient = factory.getTagIngredients();
                 if (arrayListTagIngredient.length === 0 || arrayListTagIngredient.indexOf(tagIngredient.textContent.toLowerCase()) === -1) {
-                    if (listTagIngredient.textContent.length === 17) listTagIngredient.innerHTML = `<p class="tag tagIngredient">${tagIngredient.textContent}<i class="far fa-times-circle"></i></p>`;
-                    else listTagIngredient.innerHTML += `<p class="tag tagIngredient">${tagIngredient.textContent}<i class="far fa-times-circle"></i></p>`;
+                    if (listTagIngredient.textContent.length === 17) listTagIngredient.innerHTML = `<p class="tag tagIngredient">${tagIngredient.textContent}<i class="fa-regular fa-circle-xmark"></i></p>`;
+                    else listTagIngredient.innerHTML += `<p class="tag tagIngredient">${tagIngredient.textContent}<i class="fa-regular fa-circle-xmark"></i></p>`;
                     factory.initTagIngredient(tagIngredient.textContent.toLowerCase());
                     const recetteTagIngredient = factory.filtreRecetteIngredient(factory.getRecettes(), tagIngredient.textContent.toLowerCase());
                     factory.setRecettes(recetteTagIngredient);
@@ -663,7 +652,7 @@ const spliceTagIngredient = () => {
  * handleSearchAppareil - capture la valeur passée dans la barre de recherche appareils et l'envoie à la factory
  */
 const handleSearchAppareil = () => {
-    const searchAppareil = document.querySelector('.spanAppareils');
+    const searchAppareil = document.querySelector('.spanAppliances');
     searchAppareil.addEventListener('keyup', () => {
         if (searchAppareil.querySelector('#searchAppareil').value.length >= 3) {
             const appareil = factory.searchAppareil(searchAppareil.querySelector('#searchAppareil').value.toLowerCase());
@@ -680,18 +669,18 @@ const handleSearchAppareil = () => {
  */
 const addTagAppareil = () => {
     const arrayAppareils = factory.getAppareils();
-    const divAppareils = document.querySelector('#divAppareils');
+    const divAppareils = document.querySelector('#appliances');
     const listTagAppareil = document.querySelector('#tagAppliances');
     for (let i = 0; i < arrayAppareils.length; i++) {
-        let tagAppareil = divAppareils.querySelectorAll('#listAppareils > span.tag')[i];
+        let tagAppliance = divAppareils.querySelectorAll('#listAppliances > span.tag')[i];
         arrayEvent.forEach(event => {
-            tagAppareil.addEventListener(event, () => {
+            tagAppliance.addEventListener(event, () => {
                 const arrayListTagAppareil = factory.getTagAppareils();
-                if (arrayListTagAppareil.length === 0 || arrayListTagAppareil.indexOf(tagAppareil.textContent.toLowerCase()) === -1) {
-                    if (listTagAppareil.textContent.length === 15) listTagAppareil.innerHTML = `<p class="tag tagAppareil">${tagAppareil.textContent}<i class="far fa-times-circle"></i></p>`;
-                    else listTagAppareil.innerHTML += `<p class="tag tagAppareil">${tagAppareil.textContent}<i class="far fa-times-circle"></i></p>`;
-                    factory.initTagAppareil(tagAppareil.textContent.toLowerCase());
-                    const recetteTagAppareil = factory.filtreRecetteAppareil(factory.getRecettes(), tagAppareil.textContent.toLowerCase());
+                if (arrayListTagAppareil.length === 0 || arrayListTagAppareil.indexOf(tagAppliance.textContent.toLowerCase()) === -1) {
+                    if (listTagAppareil.textContent.length === 15) listTagAppareil.innerHTML = `<p class="tag tagAppliance">${tagAppliance.textContent}<i class="fa-regular fa-circle-xmark"></i></p>`;
+                    else listTagAppareil.innerHTML += `<p class="tag tagAppliance">${tagAppliance.textContent}<i class="fa-regular fa-circle-xmark"></i></p>`;
+                    factory.initTagAppareil(tagAppliance.textContent.toLowerCase());
+                    const recetteTagAppareil = factory.filtreRecetteAppareil(factory.getRecettes(), tagAppliance.textContent.toLowerCase());
                     factory.setRecettes(recetteTagAppareil);
                     const recettes = factory.getRecettes();
                     initListIngredients(recettes);
@@ -712,15 +701,15 @@ const spliceTagAppareil = () => {
     let arrayListTagAppareil = factory.getTagAppareils();
     const listTagAppareil = document.querySelector('#tagAppliances');
     for (let i = 0; i < arrayListTagAppareil.length; i++) {
-        let tagAppareil = listTagAppareil.querySelectorAll('p.tag')[i];
+        let tagAppliance = listTagAppareil.querySelectorAll('p.tag')[i];
         arrayEvent.forEach(event => {
-            tagAppareil.querySelector('i').addEventListener(event, () => {
-                const positionTag = arrayListTagAppareil.indexOf(tagAppareil.textContent.toLowerCase());
+            tagAppliance.querySelector('i').addEventListener(event, () => {
+                const positionTag = arrayListTagAppareil.indexOf(tagAppliance.textContent.toLowerCase());
                 arrayListTagAppareil.splice(positionTag, 1);
                 factory.setTagAppareil(arrayListTagAppareil);
                 filtreTagRecette();
                 initHtmlRecettes();
-                tagAppareil.remove();
+                tagAppliance.remove();
             });
         });
     }
@@ -747,16 +736,16 @@ const handleSearchUstensil = () => {
  */
 const addTagUstensil = () => {
     const arrayUstensils = factory.getUstensils();
-    const divUstensils = document.querySelector('#divUstensiles');
+    const divUstensils = document.querySelector('#ustensils');
     const listTagUstensil = document.querySelector('#tagUstensils');
     for (let i = 0; i < arrayUstensils.length; i++) {
-        let tagUstensil = divUstensils.querySelectorAll('#listUstensiles > span.tag')[i];
+        let tagUstensil = divUstensils.querySelectorAll('#listUstensils > span.tag')[i];
         arrayEvent.forEach(event => {
             tagUstensil.addEventListener(event, () => {
                 const arrayListTagUstensil = factory.getTagUstensils();
                 if (arrayListTagUstensil.length === 0 || arrayListTagUstensil.indexOf(tagUstensil.textContent.toLowerCase()) === -1) {
-                    if (listTagUstensil.textContent.length === 16) listTagUstensil.innerHTML = `<p class="tag tagUstensile">${tagUstensil.textContent}<i class="far fa-times-circle"></i></p>`;
-                    else listTagUstensil.innerHTML += `<p class="tag tagUstensile">${tagUstensil.textContent}<i class="far fa-times-circle"></i></p>`;
+                    if (listTagUstensil.textContent.length === 16) listTagUstensil.innerHTML = `<p class="tag tagUstensil">${tagUstensil.textContent}<i class="fa-regular fa-circle-xmark"></i></p>`;
+                    else listTagUstensil.innerHTML += `<p class="tag tagUstensil">${tagUstensil.textContent}<i class="fa-regular fa-circle-xmark"></i></p>`;
                     factory.initTagUstensil(tagUstensil.textContent.toLowerCase());
                     const recetteTagUstensil = factory.filtreRecetteUstensil(factory.getRecettes(), tagUstensil.textContent.toLowerCase());
                     factory.setRecettes(recetteTagUstensil);

@@ -18,13 +18,14 @@ header {
 
 main {
   width: 90%;
-  max-width: 1439px;
+  max-width: 1140px;
   margin: 0 auto;
 
   section.search-section {
     margin-top: 1em;
     text-align: left;
     & > form {
+      margin-bottom: 10px;
       & > input#search {
         width: 100%;
         font-family: var(--font-main);
@@ -48,7 +49,7 @@ main {
         font-size: 1.8em;
       }
     }
-    & > #tagList > div {
+    & > #tagsList > div {
       display: inline-block;
       & > .tag {
         width: max-content;
@@ -60,31 +61,33 @@ main {
         padding-right: 1.35em;
         margin-right: 0.5em;
         margin-bottom: -0.5em;
-        font-size: 0.6em;
+        font-size: .8em;
         font-family: var(--font-main);
         font-weight: 600;
+        position: relative;
         transition: all 0.5s;
-        & > .fa-times-circle {
-          margin-left: 0.5em;
+        & > .fa-circle-xmark {
           font-size: 1.2em;
+          position: relative;
+          left: 5px;
           cursor: pointer;
-          transition: all 1.5s;
+          transition: all 1s;
           &:hover,
           &:active,
           &:focus {
-            transform: rotate(472deg);
+            transform: rotate(360deg);
           }
         }
       }
     }
-    & > #tagList > div > .tagIngredient {
+    & > #tagsList > div > .tagIngredient {
       background: var(--color-secondary);
     }
-    & > #tagList > div > .tagDevice {
+    & > #tagsList > div > .tagAppliance {
       background: var(--color-tertiary);
     }
-    & > #tagList > div > .tagUstensil {
-      background: var(--color-quarternary);
+    & > #tagsList > div > .tagUstensil {
+      background: var(--color-quaternary);
     }
     & > .tagList {
       display: inline-flex;
@@ -93,18 +96,17 @@ main {
       background: var(--color-secondary);
       font-family: var(--font-main);
       font-weight: 600;
-      font-size: 0.75em;
-      width: 115px;
+      font-size: 1em;
+      width: 140px;
+      height: 50px;
       min-width: initial;
-      max-width: 397px;
-      //   height: 19.7px;
+      max-width: 355px;
       transition: all 1s;
       padding: 1em;
-      padding-top: 1.3em;
       color: white;
       margin-top: 1.5em;
       margin-right: 0.8em;
-      margin-bottom: -0.5em;
+      // margin-bottom: -0.5em;
       border-radius: 3px;
       cursor: pointer;
       position: relative;
@@ -126,8 +128,10 @@ main {
       }
       & .fa-chevron-up {
         transform: rotate(180deg);
-        margin-left: auto;
-        margin-right: 0.5em;
+        // margin-left: auto;
+        // margin-right: 0.5em;
+        position: relative;
+        left: 10px;
         cursor: pointer;
         transition: all 0.4s;
       }
@@ -169,7 +173,7 @@ main {
           &:hover,
           &:active,
           &:focus {
-            color: #0050c9;
+            color: lighten($color-secondary, 40%);
           }
         }
       }
@@ -189,7 +193,8 @@ main {
           &:hover,
           &:active,
           &:focus {
-            color: #3e8f69;
+            // color: #3e8f69;
+            color: lighten($color-tertiary, 40%);
           }
         }
       }
@@ -210,7 +215,8 @@ main {
           &:hover,
           &:active,
           &:focus {
-            color: #bb3c2e;
+            // color: #bb3c2e;
+            color: lighten($color-quaternary, 40%);
           }
         }
       }
