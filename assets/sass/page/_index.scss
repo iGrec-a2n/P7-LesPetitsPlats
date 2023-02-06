@@ -44,9 +44,11 @@ main {
       }
       & > .fa-search {
         position: relative;
+        top: -36px;
         left: calc(100% - 40px);
         margin-top: -1.45em;
         font-size: 1.8em;
+        font-weight: 900;
       }
     }
     & > #tagsList > div {
@@ -98,11 +100,11 @@ main {
       font-weight: 600;
       font-size: 1em;
       width: 140px;
-      height: 50px;
+      height: 54px;
       min-width: initial;
       max-width: 355px;
       transition: all 1s;
-      padding: 1em;
+      padding: 15px;
       color: white;
       margin-top: 1.5em;
       margin-right: 0.8em;
@@ -128,10 +130,7 @@ main {
       }
       & .fa-chevron-up {
         transform: rotate(180deg);
-        // margin-left: auto;
-        // margin-right: 0.5em;
-        position: relative;
-        left: 10px;
+        margin-left: auto;
         cursor: pointer;
         transition: all 0.4s;
       }
@@ -139,7 +138,7 @@ main {
         display: none;
         overflow: auto;
         width: 100%;
-        height: 90%;
+        height: 82%;
         margin-top: 1.5em;
         flex-wrap: wrap;
         align-content: space-between;
@@ -166,14 +165,14 @@ main {
       }
       & > #listIngredients {
         &::-webkit-scrollbar-thumb {
-          background: #0060ec;
+          background: lighten($color-secondary, 20);
           border-radius: 5px;
         }
         & > span {
           &:hover,
           &:active,
           &:focus {
-            color: lighten($color-secondary, 40%);
+            color: lighten($color-secondary, 40);
           }
         }
       }
@@ -186,7 +185,7 @@ main {
       }
       & > #listAppliances {
         &::-webkit-scrollbar-thumb {
-          background: #469e75;
+          background: lighten($color-tertiary, 20);
           border-radius: 5px;
         }
         & > span {
@@ -194,7 +193,7 @@ main {
           &:active,
           &:focus {
             // color: #3e8f69;
-            color: lighten($color-tertiary, 40%);
+            color: lighten($color-tertiary, 40);
           }
         }
       }
@@ -208,15 +207,14 @@ main {
       }
       & > #listUstensils {
         &::-webkit-scrollbar-thumb {
-          background: #d74938;
+          background: lighten($color-quaternary, 20);
           border-radius: 5px;
         }
         & > span {
           &:hover,
           &:active,
           &:focus {
-            // color: #bb3c2e;
-            color: lighten($color-quaternary, 40%);
+            color: lighten($color-quaternary, 40);
           }
         }
       }

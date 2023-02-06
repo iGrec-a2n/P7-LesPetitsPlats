@@ -188,9 +188,11 @@ main section.search-section > form > input#search::-webkit-search-cancel-button 
 }
 main section.search-section > form > .fa-search {
   position: relative;
+  top: -36px;
   left: calc(100% - 40px);
   margin-top: -1.45em;
   font-size: 1.8em;
+  font-weight: 900;
 }
 main section.search-section > #tagsList > div {
   display: inline-block;
@@ -239,11 +241,11 @@ main section.search-section > .tagList {
   font-weight: 600;
   font-size: 1em;
   width: 140px;
-  height: 50px;
+  height: 54px;
   min-width: initial;
   max-width: 355px;
   transition: all 1s;
-  padding: 1em;
+  padding: 15px;
   color: white;
   margin-top: 1.5em;
   margin-right: 0.8em;
@@ -268,8 +270,7 @@ main section.search-section > .tagList > span > input::placeholder {
 }
 main section.search-section > .tagList .fa-chevron-up {
   transform: rotate(180deg);
-  position: relative;
-  left: 10px;
+  margin-left: auto;
   cursor: pointer;
   transition: all 0.4s;
 }
@@ -277,7 +278,7 @@ main section.search-section > .tagList > .list {
   display: none;
   overflow: auto;
   width: 100%;
-  height: 90%;
+  height: 82%;
   margin-top: 1.5em;
   flex-wrap: wrap;
   align-content: space-between;
@@ -303,7 +304,7 @@ main section.search-section > #ingredients:hover {
   transition: all 0.5s;
 }
 main section.search-section > #ingredients > #listIngredients::-webkit-scrollbar-thumb {
-  background: #0060ec;
+  background: #94befb;
   border-radius: 5px;
 }
 main section.search-section > #ingredients > #listIngredients > span:hover, main section.search-section > #ingredients > #listIngredients > span:active, main section.search-section > #ingredients > #listIngredients > span:focus {
@@ -317,7 +318,7 @@ main section.search-section > #appliances:hover {
   transition: all 0.5s;
 }
 main section.search-section > #appliances > #listAppliances::-webkit-scrollbar-thumb {
-  background: #469e75;
+  background: #b9eed5;
   border-radius: 5px;
 }
 main section.search-section > #appliances > #listAppliances > span:hover, main section.search-section > #appliances > #listAppliances > span:active, main section.search-section > #appliances > #listAppliances > span:focus {
@@ -332,7 +333,7 @@ main section.search-section > #ustensils:hover {
   transition: all 0.5s;
 }
 main section.search-section > #ustensils > #listUstensils::-webkit-scrollbar-thumb {
-  background: #d74938;
+  background: #f7b8b0;
   border-radius: 5px;
 }
 main section.search-section > #ustensils > #listUstensils > span:hover, main section.search-section > #ustensils > #listUstensils > span:active, main section.search-section > #ustensils > #listUstensils > span:focus {
