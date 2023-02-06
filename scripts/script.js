@@ -87,7 +87,7 @@ const dataFactory = () => {
   /**
    * setRecipes - entre les recettes filtreés dans le tableau arrayRecipes
    * @param  {Array} dataRecipes tableau contenant les recettes filtrées
-     * @param  {Array} dataRecipes tableau contenant les recettes filtrées 
+   * @param  {Array} dataRecipes tableau contenant les recettes filtrées
    * @param  {Array} dataRecipes tableau contenant les recettes filtrées
    */
   const setRecipes = (dataRecipes) => {
@@ -97,7 +97,7 @@ const dataFactory = () => {
   /**
    * setOrigineRecipes - entre les recettes dans le tableau arrayOrigineRecipes
    * @param  {Array} dataRecipes tableau contenant les recettes
-     * @param  {Array} dataRecipes tableau contenant les recettes 
+   * @param  {Array} dataRecipes tableau contenant les recettes
    * @param  {Array} dataRecipes tableau contenant les recettes
    */
   const setOrigineRecipes = (dataRecipes) => {
@@ -107,7 +107,7 @@ const dataFactory = () => {
   /**
    * setIngredient - entre les ingrédients filtreés dans le tableau arrayIngrédients
    * @param  {Array} dataIngredients tableau contenant les ingrédients filtrées
-     * @param  {Array} dataIngredients tableau contenant les ingrédients filtrées 
+   * @param  {Array} dataIngredients tableau contenant les ingrédients filtrées
    * @param  {Array} dataIngredients tableau contenant les ingrédients filtrées
    */
   const setIngredient = (dataIngredients) => {
@@ -117,7 +117,7 @@ const dataFactory = () => {
   /**
    * setTagIngredient - entre les tags ingrédients dans le tableau arrayTagIngrédients
    * @param  {Array} dataTagIngredients tableau contenant les tags ingrédients
-     * @param  {Array} dataTagIngredients tableau contenant les tags ingrédients 
+   * @param  {Array} dataTagIngredients tableau contenant les tags ingrédients
    * @param  {Array} dataTagIngredients tableau contenant les tags ingrédients
    */
   const setTagIngredient = (dataTagIngredients) => {
@@ -127,7 +127,7 @@ const dataFactory = () => {
   /**
    * setAppliance - entre les appareils filtreés dans le tableau arrayAppliances
    * @param  {Array} dataAppliances tableau contenant les appareils filtrées
-     * @param  {Array} dataAppliances tableau contenant les appareils filtrées 
+   * @param  {Array} dataAppliances tableau contenant les appareils filtrées
    * @param  {Array} dataAppliances tableau contenant les appareils filtrées
    */
   const setAppliance = (dataAppliances) => {
@@ -137,7 +137,7 @@ const dataFactory = () => {
   /**
    * setTagAppliance - entre les tags appareils dans le tableau arrayTagAppliances
    * @param  {Array} dataTagAppliances tableau contenant les tags appareils
-     * @param  {Array} dataTagAppliances tableau contenant les tags appareils 
+   * @param  {Array} dataTagAppliances tableau contenant les tags appareils
    * @param  {Array} dataTagAppliances tableau contenant les tags appareils
    */
   const setTagAppliance = (dataTagAppliances) => {
@@ -147,7 +147,7 @@ const dataFactory = () => {
   /**
    * setUstensil - entre les ustensils filtreés dans le tableau arrayUstensils
    * @param  {Array} dataUstensils tableau contenant les ustensils filtrées
-     * @param  {Array} dataUstensils tableau contenant les ustensils filtrées 
+   * @param  {Array} dataUstensils tableau contenant les ustensils filtrées
    * @param  {Array} dataUstensils tableau contenant les ustensils filtrées
    */
   const setUstensil = (dataUstensils) => {
@@ -157,7 +157,7 @@ const dataFactory = () => {
   /**
    * setTagUstensil - entre les tags ustensils dans le tableau arrayTagUstensils
    * @param  {Array} dataTagUstensils tableau contenant les tags ustensils
-     * @param  {Array} dataTagUstensils tableau contenant les tags ustensils 
+   * @param  {Array} dataTagUstensils tableau contenant les tags ustensils
    * @param  {Array} dataTagUstensils tableau contenant les tags ustensils
    */
   const setTagUstensil = (dataTagUstensils) => {
@@ -167,7 +167,7 @@ const dataFactory = () => {
   /**
    * getRecipes - retourne le tableau arrayRecipes
    * @return  {Array} arrayRecipes contenant les recettes
-     * @return  {Array} arrayRecipes contenant les recettes 
+   * @return  {Array} arrayRecipes contenant les recettes
    * @return  {Array} arrayRecipes contenant les recettes
    */
   const getRecipes = () => {
@@ -177,7 +177,7 @@ const dataFactory = () => {
   /**
    * getOrigineRecipes - retourne le tableau arrayOrigineRecipes
    * @return  {Array} arrayOrigineRecipes contenant les recettes
-     * @return  {Array} arrayOrigineRecipes contenant les recettes 
+   * @return  {Array} arrayOrigineRecipes contenant les recettes
    * @return  {Array} arrayOrigineRecipes contenant les recettes
    */
   const getOrigineRecipes = () => {
@@ -187,7 +187,7 @@ const dataFactory = () => {
   /**
    * getIngredients - retourne le tableau arrayIngredients
    * @return  {Array} arrayIngredients contenant les ingrédients des recettes
-     * @return  {Array} arrayIngredients contenant les ingrédients des recettes 
+   * @return  {Array} arrayIngredients contenant les ingrédients des recettes
    * @return  {Array} arrayIngredients contenant les ingrédients des recettes
    */
   const getIngredients = () => {
@@ -197,7 +197,7 @@ const dataFactory = () => {
   /**
    * getTagIngredients - retourne le tableau arrayTagIngredients
    * @return  {Array} arrayTagIngredients contenant les tags ingrédients des recettes ajoutées
-     * @return  {Array} arrayTagIngredients contenant les tags ingrédients des recettes ajoutées 
+   * @return  {Array} arrayTagIngredients contenant les tags ingrédients des recettes ajoutées
    * @return  {Array} arrayTagIngredients contenant les tags ingrédients des recettes ajoutées
    */
   const getTagIngredients = () => {
@@ -207,7 +207,7 @@ const dataFactory = () => {
   /**
    * getAppliances - retourne le tableau arrayAppliances
    * @return  {Array} arrayAppliances contenant les appareils des recettes
-     * @return  {Array} arrayAppliances contenant les appareils des recettes 
+   * @return  {Array} arrayAppliances contenant les appareils des recettes
    * @return  {Array} arrayAppliances contenant les appareils des recettes
    */
   const getAppliances = () => {
@@ -217,7 +217,7 @@ const dataFactory = () => {
   /**
    * getTagAppliances - retourne le tableau arrayTagAppliances
    * @return  {Array} arrayTagAppliances contenant les tags appareils des recettes ajoutées
-     * @return  {Array} arrayTagAppliances contenant les tags appareils des recettes ajoutées 
+   * @return  {Array} arrayTagAppliances contenant les tags appareils des recettes ajoutées
    * @return  {Array} arrayTagAppliances contenant les tags appareils des recettes ajoutées
    */
   const getTagAppliances = () => {
@@ -227,7 +227,7 @@ const dataFactory = () => {
   /**
    * getUstensils - retourne le tableau arrayUstensils
    * @return  {Array} arrayUstensils contenant les ustensils des recettes
-     * @return  {Array} arrayUstensils contenant les ustensils des recettes 
+   * @return  {Array} arrayUstensils contenant les ustensils des recettes
    * @return  {Array} arrayUstensils contenant les ustensils des recettes
    */
   const getUstensils = () => {
@@ -237,7 +237,7 @@ const dataFactory = () => {
   /**
    * getTagUstensils - retourne le tableau arrayTagUstensils
    * @return  {Array} arrayTagUstensils contenant les tags ustensils des recettes ajoutées
-     * @return  {Array} arrayTagUstensils contenant les tags ustensils des recettes ajoutées 
+   * @return  {Array} arrayTagUstensils contenant les tags ustensils des recettes ajoutées
    * @return  {Array} arrayTagUstensils contenant les tags ustensils des recettes ajoutées
    */
   const getTagUstensils = () => {
@@ -249,121 +249,22 @@ const dataFactory = () => {
    * @param  {String} search valeur passée dans la barre de recherche
    * @returns {Array} renvoie le tableau resultSearch contenant les recettes correspondant à la recherche
    */
-  // for
-  // const searchRecipes = (search) => {
-  //     let resultSearch = [];
-  //     let splitTerms = search.split(' ');
-  //     for(const term of splitTerms) {
-  //     // console.log(`'${term}' has `+term.length+` letters`);
-  //         for (let i = 0; i < arrayRecipes.length; i++) {
-  //         if (arrayRecipes[i].name.toLowerCase().includes(term)
-  //         || arrayRecipes[i].description.toLowerCase().includes(term)) {
-  //           resultSearch.push(arrayRecipes[i]);
-  //           console.log(arrayRecipes[i]);
-  //         }else {
-  //           for (let j = 0; j < arrayRecipes[i].ingredients.length; j++) {
-  //           console.log(`'${term}' has `+ term.length+ ` letters`);
-  //             if (arrayRecipes[i].ingredients[j].ingredient.toLowerCase().includes(term)) {
-  //               resultSearch.push(arrayRecipes[i]);
-  //             }
-  //           }
-  //         }
-  //       }
-  //       console.log(2);
-  //     }
-  //     return resultSearch = Array.from(new Set(resultSearch));
-  // };
   const searchRecipes = (search) => {
     let resultSearch = [];
-    let searches = search.toLowerCase().split(' ');
-    for (let i = 0; i < arrayOrigineRecipes.length; i++) {
-      let includeAllWords = true;
-      let includeWord = false;
-        searches.forEach(search => {
-          if (arrayOrigineRecipes[i].name.toLowerCase().includes(search) 
-          || arrayOrigineRecipes[i].description.toLowerCase().includes(search)) {
-            includeWord = true;
-            } 
-            else {
-              for (let j = 0; j < arrayOrigineRecipes[i].ingredients.length; j++) {
-                if (arrayOrigineRecipes[i].ingredients[j].ingredient.toLowerCase().includes(search)) {
-                  includeWord = true;
-                }
-              }
+    for (let i = 0; i < arrayRecipes.length; i++) {
+        if (arrayRecipes[i].name.toLowerCase().includes(search) ||
+            arrayRecipes[i].description.toLowerCase().includes(search)) {
+            resultSearch.push(arrayRecipes[i]);
+        }else {
+          for (let y = 0; y < arrayRecipes[i].ingredients.length; y++) {
+            if (arrayRecipes[i].ingredients[y].ingredient.toLowerCase().includes(search)) {
+                resultSearch.push(arrayRecipes[i]);
             }
-            if (!includeWord) {
-                includeAllWords = false;
-            }
-        });
-        if (includeAllWords || includeWord) {
-            resultSearch.push(arrayOrigineRecipes[i]);
+          }
         }
     }
     return resultSearch = Array.from(new Set(resultSearch));
 };
-
-  // forEach
-//   const searchRecipes = (searchesTerms) => {
-//     let resultSearch = [];
-//     let searches = searchesTerms.split(' ');
-//     arrayRecipes.forEach(recipe => {
-//         let includeAllWords = true;
-//         searches.forEach(search => {
-//             let includeWord = false;
-//             if (recipe.name.toLowerCase().includes(search)
-//              || recipe.description.toLowerCase().includes(search)) {
-//                 includeWord = true;
-//             } else {
-//                 recipe.ingredients.forEach(ingredient => {
-//                     if (ingredient.ingredient.toLowerCase().includes(search)) {
-//                         includeWord = true;
-//                     }
-//                 });
-//             }
-//             if (!includeWord) {
-//                 includeAllWords = false;
-//             }
-//         });
-//         if (includeAllWords) {
-//             resultSearch.push(recipe);
-//         }
-//     });
-//     return resultSearch = Array.from(new Set(resultSearch));
-// };
-  // const searchRecipes = (search) => {
-  //     let resultSearch = [];
-  //     arrayRecipes.forEach(recipe => {
-  //         if (recipe.name.toLowerCase().includes(search)
-  //          || recipe.description.toLowerCase().includes(search)) {
-  //             resultSearch.push(recipe);
-  //         } else {
-  //             recipe.ingredients.forEach(ingredient => {
-  //                 if (ingredient.ingredient.toLowerCase().includes(search)) {
-  //                     resultSearch.push(recipe);
-  //                 }
-  //             });
-  //         }
-  //     });
-  //     return resultSearch = Array.from(new Set(resultSearch));
-  // };
-
-  // // filter
-  // const searchRecipes = (search) => {
-  //   let splitTerms = search.split(' ');
-  //   let resultSearch = arrayRecipes.filter((recipe) => {
-  //     let ingredients = recipe.ingredients.filter((ingredient) => {
-  //       splitTerms.forEach(terms => {
-  //         ingredient.ingredient.toLowerCase().includes(terms)
-  //       })
-  //     });
-  //     return (
-  //       recipe.name.toLowerCase().includes(search) ||
-  //       recipe.description.toLowerCase().includes(search) ||
-  //       ingredients.length > 0
-  //     );
-  //   });
-  //   return Array.from(new Set(resultSearch));
-  // };
 
   /**
    * searchIngredient - filtre le tableau arrayIngredients en function de la valeur search passée
@@ -507,16 +408,16 @@ let arrayAppliances = [];
 let arrayTagAppliances = [];
 let arrayUstensils = [];
 let arrayTagUstensils = [];
-const section1 = document.querySelector('.search-section');
-const section2 = document.querySelector('.recipes-section');
-const divIngredient = document.querySelector('#ingredients');
-const divAppliance = document.querySelector('#appliances');
-const divUstensil = document.querySelector('#ustensils');
-const idListIngredient = document.querySelector('#listIngredients');
-const idListAppliance = document.querySelector('#listAppliances');
-const idListUstensil = document.querySelector('#listUstensils');
-const searchRecipes = document.querySelector('#search');
-const arrayEvent = ['click', 'keypress'];
+const section1 = document.querySelector(".search-section");
+const section2 = document.querySelector(".recipes-section");
+const divIngredient = document.querySelector("#ingredients");
+const divAppliance = document.querySelector("#appliances");
+const divUstensil = document.querySelector("#ustensils");
+const idListIngredient = document.querySelector("#listIngredients");
+const idListAppliance = document.querySelector("#listAppliances");
+const idListUstensil = document.querySelector("#listUstensils");
+const searchRecipes = document.querySelector("#search");
+const arrayEvent = ["click", "keypress"];
 
 /**
  * initDataPage - initialise la page
@@ -686,9 +587,9 @@ const closeDivList = (element) => {
   divAppliance.querySelector("span").textContent = "Appareils";
   divUstensil.querySelector("span").textContent = "Ustensiles";
   element.style.width = "140px";
-  element.style.minWidth = 'initial';
+  element.style.minWidth = "initial";
   element.style.height = "54px";
-  console.log('clicked');
+  console.log("clicked");
   element.querySelector(".fa-chevron-up").style.transform = "rotate(180deg)";
   element.querySelector("div").style.display = "none";
 };
@@ -699,7 +600,7 @@ const closeDivList = (element) => {
 const handleDivList = () => {
   arrayEvent.forEach((event) => {
     [ingredients, appliances, ustensils].forEach((element) => {
-      element.querySelector('.fa-chevron-up').addEventListener(event, () => {
+      element.querySelector(".fa-chevron-up").addEventListener(event, () => {
         if (element.style.width === "140px") {
           // On ferme tous les divList
           for (let i = 0; i < 3; i++) {
@@ -720,21 +621,25 @@ const handleDivList = () => {
           element.style.height = "250px";
 
           if (element === divIngredient) {
-            element.querySelector("span").innerHTML = 
-              `<input type="search" placeholder="Rechercher un ingrédient" aria-label="Rechercher un ingrédient" 
+            element.querySelector(
+              "span"
+            ).innerHTML = `<input type="search" placeholder="Rechercher un ingrédient" aria-label="Rechercher un ingrédient" 
                 name="searchIngredient" id="searchIngredient" class="searchInputList">`;
           } else if (element === divAppliance) {
-            element.querySelector("span").innerHTML = 
-              `<input type="search" placeholder="Rechercher un appareil" aria-label="Rechercher un appareil" 
+            element.querySelector(
+              "span"
+            ).innerHTML = `<input type="search" placeholder="Rechercher un appareil" aria-label="Rechercher un appareil" 
                 name="searchAppliance" id="searchAppliance" class="searchInputList">`;
           } else if (element === divUstensil) {
-            element.querySelector("span").innerHTML = 
-              `<input type="search" placeholder="Rechercher un ustensile" aria-label="Rechercher un ustensile" 
+            element.querySelector(
+              "span"
+            ).innerHTML = `<input type="search" placeholder="Rechercher un ustensile" aria-label="Rechercher un ustensile" 
                 name="searchUstensil" id="searchUstensil" class="searchInputList">`;
           }
-          element.querySelector(".fa-chevron-up").style.transform = "rotate(0deg)";
+          element.querySelector(".fa-chevron-up").style.transform =
+            "rotate(0deg)";
           element.querySelector("div").style.display = "flex";
-        }else {
+        } else {
           closeDivList(element);
         }
       });
@@ -748,9 +653,7 @@ const handleDivList = () => {
 const handleSearchRecipes = () => {
   searchRecipes.addEventListener("keyup", () => {
     if (searchRecipes.value.length >= 3) {
-      const recettes = factory.searchRecipes(
-        searchRecipes.value.toLowerCase()
-      );
+      const recettes = factory.searchRecipes(searchRecipes.value.toLowerCase());
       if (recettes.length !== 0) factory.setRecipes(recettes);
       initHtmlRecipes(recettes);
       initListIngredients(recettes);
@@ -1047,10 +950,7 @@ const filtreTagRecipe = () => {
     factory.setRecipes(origineRecipe);
   });
   arrayListTagUstensil.forEach((tag) => {
-    const recetteTagUstensil = factory.filtreRecipeUstensil(
-      origineRecipe,
-      tag
-    );
+    const recetteTagUstensil = factory.filtreRecipeUstensil(origineRecipe, tag);
     origineRecipe = recetteTagUstensil;
     factory.setRecipes(origineRecipe);
   });
