@@ -251,21 +251,21 @@ const dataFactory = () => {
    */
   const searchRecipes = (search) => {
     let resultSearch = [];
-    for (let i = 0; i < arrayRecipes.length; i++) {
-        if (arrayRecipes[i].name.toLowerCase().includes(search) ||
-            arrayRecipes[i].description.toLowerCase().includes(search)) {
-            resultSearch.push(arrayRecipes[i]);
-        }else {
-          for (let y = 0; y < arrayRecipes[i].ingredients.length; y++) {
-            if (arrayRecipes[i].ingredients[y].ingredient.toLowerCase().includes(search)) {
-                resultSearch.push(arrayRecipes[i]);
-            }
+    arrayRecipes.forEach(recipe => {
+      if (recipe.name.toLowerCase().includes(search) || 
+          recipe.description.toLowerCase().includes(search)) {
+        resultSearch.push(recipe);
+      } else {
+        recipe.ingredients.forEach(ingredient => {
+          if (ingredient.ingredient.toLowerCase().includes(search)) {
+            resultSearch.push(recipe);
           }
-        }
-    }
-    return resultSearch = Array.from(new Set(resultSearch));
-};
-
+        });
+      }
+    });
+    return Array.from(new Set(resultSearch));
+  };
+  
   /**
    * searchIngredient - filtre le tableau arrayIngredients en function de la valeur search passée
    * @param  {String} search valeur passée dans la barre de recherche
