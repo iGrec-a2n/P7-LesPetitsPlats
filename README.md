@@ -1,4 +1,4 @@
-# Projet 7 OpenClassrooms - DAJR - LesPetitsPlats
+# Projet 7 - OpenClassrooms ~ DAJR - LesPetitsPlats
 
 ## Les petis plats est un site de cuisine, ou l'on trouve les meilleurs recette de cuisine.
 
