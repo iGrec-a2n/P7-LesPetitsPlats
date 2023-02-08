@@ -249,121 +249,16 @@ const dataFactory = () => {
    * @param  {String} search valeur passée dans la barre de recherche
    * @returns {Array} renvoie le tableau resultSearch contenant les recettes correspondant à la recherche
    */
-  // for
-  // const searchRecipes = (search) => {
-  //     let resultSearch = [];
-  //     let splitTerms = search.split(' ');
-  //     for(const term of splitTerms) {
-  //     // console.log(`'${term}' has `+term.length+` letters`);
-  //         for (let i = 0; i < arrayRecipes.length; i++) {
-  //         if (arrayRecipes[i].name.toLowerCase().includes(term)
-  //         || arrayRecipes[i].description.toLowerCase().includes(term)) {
-  //           resultSearch.push(arrayRecipes[i]);
-  //           console.log(arrayRecipes[i]);
-  //         }else {
-  //           for (let j = 0; j < arrayRecipes[i].ingredients.length; j++) {
-  //           console.log(`'${term}' has `+ term.length+ ` letters`);
-  //             if (arrayRecipes[i].ingredients[j].ingredient.toLowerCase().includes(term)) {
-  //               resultSearch.push(arrayRecipes[i]);
-  //             }
-  //           }
-  //         }
-  //       }
-  //       console.log(2);
-  //     }
-  //     return resultSearch = Array.from(new Set(resultSearch));
-  // };
+
   const searchRecipes = (search) => {
-    let resultSearch = [];
-    let searches = search.toLowerCase().split(' ');
-    for (let i = 0; i < arrayOrigineRecipes.length; i++) {
-      let includeAllWords = true;
-      let includeWord = false;
-        searches.forEach(search => {
-          if (arrayOrigineRecipes[i].name.toLowerCase().includes(search) 
-          || arrayOrigineRecipes[i].description.toLowerCase().includes(search)) {
-            includeWord = true;
-            } 
-            else {
-              for (let j = 0; j < arrayOrigineRecipes[i].ingredients.length; j++) {
-                if (arrayOrigineRecipes[i].ingredients[j].ingredient.toLowerCase().includes(search)) {
-                  includeWord = true;
-                }
-              }
-            }
-            if (!includeWord) {
-                includeAllWords = false;
-            }
-        });
-        if (includeAllWords || includeWord) {
-            resultSearch.push(arrayOrigineRecipes[i]);
-        }
-    }
-    return resultSearch = Array.from(new Set(resultSearch));
-};
-
-  // forEach
-//   const searchRecipes = (searchesTerms) => {
-//     let resultSearch = [];
-//     let searches = searchesTerms.split(' ');
-//     arrayRecipes.forEach(recipe => {
-//         let includeAllWords = true;
-//         searches.forEach(search => {
-//             let includeWord = false;
-//             if (recipe.name.toLowerCase().includes(search)
-//              || recipe.description.toLowerCase().includes(search)) {
-//                 includeWord = true;
-//             } else {
-//                 recipe.ingredients.forEach(ingredient => {
-//                     if (ingredient.ingredient.toLowerCase().includes(search)) {
-//                         includeWord = true;
-//                     }
-//                 });
-//             }
-//             if (!includeWord) {
-//                 includeAllWords = false;
-//             }
-//         });
-//         if (includeAllWords) {
-//             resultSearch.push(recipe);
-//         }
-//     });
-//     return resultSearch = Array.from(new Set(resultSearch));
-// };
-  // const searchRecipes = (search) => {
-  //     let resultSearch = [];
-  //     arrayRecipes.forEach(recipe => {
-  //         if (recipe.name.toLowerCase().includes(search)
-  //          || recipe.description.toLowerCase().includes(search)) {
-  //             resultSearch.push(recipe);
-  //         } else {
-  //             recipe.ingredients.forEach(ingredient => {
-  //                 if (ingredient.ingredient.toLowerCase().includes(search)) {
-  //                     resultSearch.push(recipe);
-  //                 }
-  //             });
-  //         }
-  //     });
-  //     return resultSearch = Array.from(new Set(resultSearch));
-  // };
-
-  // // filter
-  // const searchRecipes = (search) => {
-  //   let splitTerms = search.split(' ');
-  //   let resultSearch = arrayRecipes.filter((recipe) => {
-  //     let ingredients = recipe.ingredients.filter((ingredient) => {
-  //       splitTerms.forEach(terms => {
-  //         ingredient.ingredient.toLowerCase().includes(terms)
-  //       })
-  //     });
-  //     return (
-  //       recipe.name.toLowerCase().includes(search) ||
-  //       recipe.description.toLowerCase().includes(search) ||
-  //       ingredients.length > 0
-  //     );
-  //   });
-  //   return Array.from(new Set(resultSearch));
-  // };
+    return Array.from(new Set(arrayRecipes.filter(recipe => 
+      recipe.name.toLowerCase().includes(search) 
+      || recipe.description.toLowerCase().includes(search) 
+      || recipe.ingredients.some(ingredient => 
+        ingredient.ingredient.toLowerCase().includes(search)
+      )
+    )));
+  };
 
   /**
    * searchIngredient - filtre le tableau arrayIngredients en function de la valeur search passée
