@@ -87,8 +87,6 @@ const dataFactory = () => {
   /**
    * setRecipes - entre les recettes filtreés dans le tableau arrayRecipes
    * @param  {Array} dataRecipes tableau contenant les recettes filtrées
-     * @param  {Array} dataRecipes tableau contenant les recettes filtrées 
-   * @param  {Array} dataRecipes tableau contenant les recettes filtrées
    */
   const setRecipes = (dataRecipes) => {
     arrayRecipes = dataRecipes;
@@ -96,8 +94,6 @@ const dataFactory = () => {
 
   /**
    * setOrigineRecipes - entre les recettes dans le tableau arrayOrigineRecipes
-   * @param  {Array} dataRecipes tableau contenant les recettes
-     * @param  {Array} dataRecipes tableau contenant les recettes 
    * @param  {Array} dataRecipes tableau contenant les recettes
    */
   const setOrigineRecipes = (dataRecipes) => {
@@ -107,8 +103,6 @@ const dataFactory = () => {
   /**
    * setIngredient - entre les ingrédients filtreés dans le tableau arrayIngrédients
    * @param  {Array} dataIngredients tableau contenant les ingrédients filtrées
-     * @param  {Array} dataIngredients tableau contenant les ingrédients filtrées 
-   * @param  {Array} dataIngredients tableau contenant les ingrédients filtrées
    */
   const setIngredient = (dataIngredients) => {
     arrayIngredients = dataIngredients;
@@ -116,8 +110,6 @@ const dataFactory = () => {
 
   /**
    * setTagIngredient - entre les tags ingrédients dans le tableau arrayTagIngrédients
-   * @param  {Array} dataTagIngredients tableau contenant les tags ingrédients
-     * @param  {Array} dataTagIngredients tableau contenant les tags ingrédients 
    * @param  {Array} dataTagIngredients tableau contenant les tags ingrédients
    */
   const setTagIngredient = (dataTagIngredients) => {
@@ -127,8 +119,6 @@ const dataFactory = () => {
   /**
    * setAppliance - entre les appareils filtreés dans le tableau arrayAppliances
    * @param  {Array} dataAppliances tableau contenant les appareils filtrées
-     * @param  {Array} dataAppliances tableau contenant les appareils filtrées 
-   * @param  {Array} dataAppliances tableau contenant les appareils filtrées
    */
   const setAppliance = (dataAppliances) => {
     arrayAppliances = dataAppliances;
@@ -136,8 +126,6 @@ const dataFactory = () => {
 
   /**
    * setTagAppliance - entre les tags appareils dans le tableau arrayTagAppliances
-   * @param  {Array} dataTagAppliances tableau contenant les tags appareils
-     * @param  {Array} dataTagAppliances tableau contenant les tags appareils 
    * @param  {Array} dataTagAppliances tableau contenant les tags appareils
    */
   const setTagAppliance = (dataTagAppliances) => {
@@ -147,8 +135,6 @@ const dataFactory = () => {
   /**
    * setUstensil - entre les ustensils filtreés dans le tableau arrayUstensils
    * @param  {Array} dataUstensils tableau contenant les ustensils filtrées
-     * @param  {Array} dataUstensils tableau contenant les ustensils filtrées 
-   * @param  {Array} dataUstensils tableau contenant les ustensils filtrées
    */
   const setUstensil = (dataUstensils) => {
     arrayUstensils = dataUstensils;
@@ -156,8 +142,6 @@ const dataFactory = () => {
 
   /**
    * setTagUstensil - entre les tags ustensils dans le tableau arrayTagUstensils
-   * @param  {Array} dataTagUstensils tableau contenant les tags ustensils
-     * @param  {Array} dataTagUstensils tableau contenant les tags ustensils 
    * @param  {Array} dataTagUstensils tableau contenant les tags ustensils
    */
   const setTagUstensil = (dataTagUstensils) => {
@@ -167,8 +151,6 @@ const dataFactory = () => {
   /**
    * getRecipes - retourne le tableau arrayRecipes
    * @return  {Array} arrayRecipes contenant les recettes
-     * @return  {Array} arrayRecipes contenant les recettes 
-   * @return  {Array} arrayRecipes contenant les recettes
    */
   const getRecipes = () => {
     return arrayRecipes;
@@ -176,8 +158,6 @@ const dataFactory = () => {
 
   /**
    * getOrigineRecipes - retourne le tableau arrayOrigineRecipes
-   * @return  {Array} arrayOrigineRecipes contenant les recettes
-     * @return  {Array} arrayOrigineRecipes contenant les recettes 
    * @return  {Array} arrayOrigineRecipes contenant les recettes
    */
   const getOrigineRecipes = () => {
@@ -187,8 +167,6 @@ const dataFactory = () => {
   /**
    * getIngredients - retourne le tableau arrayIngredients
    * @return  {Array} arrayIngredients contenant les ingrédients des recettes
-     * @return  {Array} arrayIngredients contenant les ingrédients des recettes 
-   * @return  {Array} arrayIngredients contenant les ingrédients des recettes
    */
   const getIngredients = () => {
     return arrayIngredients;
@@ -196,8 +174,6 @@ const dataFactory = () => {
 
   /**
    * getTagIngredients - retourne le tableau arrayTagIngredients
-   * @return  {Array} arrayTagIngredients contenant les tags ingrédients des recettes ajoutées
-     * @return  {Array} arrayTagIngredients contenant les tags ingrédients des recettes ajoutées 
    * @return  {Array} arrayTagIngredients contenant les tags ingrédients des recettes ajoutées
    */
   const getTagIngredients = () => {
@@ -207,8 +183,6 @@ const dataFactory = () => {
   /**
    * getAppliances - retourne le tableau arrayAppliances
    * @return  {Array} arrayAppliances contenant les appareils des recettes
-     * @return  {Array} arrayAppliances contenant les appareils des recettes 
-   * @return  {Array} arrayAppliances contenant les appareils des recettes
    */
   const getAppliances = () => {
     return arrayAppliances;
@@ -216,8 +190,6 @@ const dataFactory = () => {
 
   /**
    * getTagAppliances - retourne le tableau arrayTagAppliances
-   * @return  {Array} arrayTagAppliances contenant les tags appareils des recettes ajoutées
-     * @return  {Array} arrayTagAppliances contenant les tags appareils des recettes ajoutées 
    * @return  {Array} arrayTagAppliances contenant les tags appareils des recettes ajoutées
    */
   const getTagAppliances = () => {
@@ -227,8 +199,6 @@ const dataFactory = () => {
   /**
    * getUstensils - retourne le tableau arrayUstensils
    * @return  {Array} arrayUstensils contenant les ustensils des recettes
-     * @return  {Array} arrayUstensils contenant les ustensils des recettes 
-   * @return  {Array} arrayUstensils contenant les ustensils des recettes
    */
   const getUstensils = () => {
     return arrayUstensils;
@@ -236,8 +206,6 @@ const dataFactory = () => {
 
   /**
    * getTagUstensils - retourne le tableau arrayTagUstensils
-   * @return  {Array} arrayTagUstensils contenant les tags ustensils des recettes ajoutées
-     * @return  {Array} arrayTagUstensils contenant les tags ustensils des recettes ajoutées 
    * @return  {Array} arrayTagUstensils contenant les tags ustensils des recettes ajoutées
    */
   const getTagUstensils = () => {
@@ -266,12 +234,8 @@ const dataFactory = () => {
    * @returns {Array} renvoie le tableau resultSearch contenant les résultats filtrés
    */
   const searchIngredient = (search) => {
-    let resultSearch = [];
-    for (let i = 0; i < arrayIngredients.length; i++) {
-      if (arrayIngredients[i].toLowerCase().includes(search))
-        resultSearch.push(arrayIngredients[i]);
-    }
-    return resultSearch;
+    return Array.from(new Set(arrayIngredients.filter(resultSearch => 
+      arrayIngredients[i].toLowerCase().includes(search))))
   };
 
   /**
@@ -281,18 +245,11 @@ const dataFactory = () => {
    * @returns {Array} renvoie le tableau resultSearch contenant les résultats filtrés
    */
   const filtreRecipeIngredient = (array, tagIngredient) => {
-    let resultSearch = [];
-    for (let i = 0; i < array.length; i++) {
-      for (let j = 0; j < array[i].ingredients.length; j++) {
-        if (
-          array[i].ingredients[j].ingredient
-            .toLowerCase()
-            .includes(tagIngredient)
-        )
-          resultSearch.push(array[i]);
-      }
-    }
-    return resultSearch;
+    return array.filter(recipe => {
+      return recipe.ingredients.some(ingredient => {
+        return ingredient.ingredient.toLowerCase().includes(tagIngredient);
+      });
+    });
   };
 
   /**
@@ -339,7 +296,7 @@ const dataFactory = () => {
   };
 
   /**
-   * filtreRecipeUstensil - filtre le tableau arrayUstensils en function des valeurs dans le tableau arrayTagUstensils
+   * filtreRecipeUstensil - filtre le tableau arrayUstensils en fonction des valeurs dans le tableau arrayTagUstensils
    * @param  {Array} array tableau contenant les ustensils a filtrer
    * @param  {String} tagIngredient valeur tag ustensil
    * @returns {Array} renvoie le tableau resultSearch contenant les résultats filtrés
@@ -583,7 +540,6 @@ const closeDivList = (element) => {
   element.style.width = "140px";
   element.style.minWidth = 'initial';
   element.style.height = "54px";
-  console.log('clicked');
   element.querySelector(".fa-chevron-up").style.transform = "rotate(180deg)";
   element.querySelector("div").style.display = "none";
 };
@@ -779,12 +735,9 @@ const addTagAppliance = () => {
     arrayEvent.forEach((event) => {
       tagAppliance.addEventListener(event, () => {
         const arrayListTagAppliance = factory.getTagAppliances();
-        if (
-          arrayListTagAppliance.length === 0 ||
-          arrayListTagAppliance.indexOf(
-            tagAppliance.textContent.toLowerCase()
-          ) === -1
-        ) {
+        if (arrayListTagAppliance.length === 0 
+        || arrayListTagAppliance.indexOf(
+            tagAppliance.textContent.toLowerCase()) === -1) {
           if (listTagAppliance.textContent.length === 15)
             listTagAppliance.innerHTML = `<p class="tag tagAppliance">${tagAppliance.textContent}
                                           <i class="fa-regular fa-circle-xmark"></i></p>`;
