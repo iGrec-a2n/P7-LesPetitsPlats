@@ -168,7 +168,7 @@ main section.search-section {
   text-align: left;
 }
 main section.search-section > form {
-  margin-bottom: 10px;
+  margin-bottom: -10px;
 }
 main section.search-section > form > input#search {
   width: 100%;
