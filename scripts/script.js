@@ -235,7 +235,7 @@ const dataFactory = () => {
    */
   const searchIngredient = (search) => {
     return Array.from(new Set(arrayIngredients.filter(resultSearch => 
-      arrayIngredients[i].toLowerCase().includes(search))))
+       resultSearch.toLowerCase().includes(search))))
   };
 
   /**
@@ -246,10 +246,10 @@ const dataFactory = () => {
    */
   const filtreRecipeIngredient = (array, tagIngredient) => {
     return array.filter(recipe => {
-      return recipe.ingredients.some(ingredient => {
-        return ingredient.ingredient.toLowerCase().includes(tagIngredient);
-      });
+      return recipe.ingredients.some(ingredient => 
+         ingredient.ingredient.toLowerCase().includes(tagIngredient));
     });
+    
   };
 
   /**
@@ -258,14 +258,9 @@ const dataFactory = () => {
    * @returns {Array} renvoie le tableau resultSearch contenant les résultats filtrés
    */
   const searchAppliance = (search) => {
-    let resultSearch = [];
-    for (let i = 0; i < arrayAppliances.length; i++) {
-      if (arrayAppliances[i].toLowerCase().includes(search))
-        resultSearch.push(arrayAppliances[i]);
-    }
-    return resultSearch;
+    return arrayAppliances.filter(appliance => appliance.toLowerCase().includes(search));
   };
-
+  
   /**
    * filtreRecipeAppliance - filtre le tableau arrayAppliances en function des valeurs dans le tableau arrayTagAppliances
    * @param  {Array} array tableau contenant les recettes a filtrer
@@ -273,28 +268,20 @@ const dataFactory = () => {
    * @returns {Array} renvoie le tableau resultSearch contenant les résultats filtrés
    */
   const filtreRecipeAppliance = (array, tagAppliance) => {
-    let resultSearch = [];
-    for (let i = 0; i < array.length; i++) {
-      if (array[i].appliance.toLowerCase().includes(tagAppliance))
-        resultSearch.push(array[i]);
-    }
-    return resultSearch;
-  };
-
+    return array.filter(recipe => recipe.appliance.toLowerCase().includes(tagAppliance));
+  }
+  
   /**
    * searchUstensil - filtre le tableau arrayUstensils en function de la valeur search passée
    * @param  {String} search valeur passée dans la barre de recherche
    * @returns {Array} renvoie le tableau resultSearch contenant les résultats filtrés
    */
   const searchUstensil = (search) => {
-    let resultSearch = [];
-    for (let i = 0; i < arrayUstensils.length; i++) {
-      if (arrayUstensils[i].toLowerCase().includes(search))
-        resultSearch.push(arrayUstensils[i]);
-    }
-    return resultSearch;
+    return arrayUstensils.filter((ustensil) =>
+      ustensil.toLowerCase().includes(search)
+    );
   };
-
+  
   /**
    * filtreRecipeUstensil - filtre le tableau arrayUstensils en fonction des valeurs dans le tableau arrayTagUstensils
    * @param  {Array} array tableau contenant les ustensils a filtrer
@@ -302,16 +289,13 @@ const dataFactory = () => {
    * @returns {Array} renvoie le tableau resultSearch contenant les résultats filtrés
    */
   const filtreRecipeUstensil = (array, tagUstensil) => {
-    let resultSearch = [];
-    for (let i = 0; i < array.length; i++) {
-      for (let j = 0; j < array[i].ustensils.length; j++) {
-        if (array[i].ustensils[j].toLowerCase().includes(tagUstensil))
-          resultSearch.push(array[i]);
-      }
-    }
-    return resultSearch;
+    return array.filter((recipe) =>
+      recipe.ustensils.some((ustensil) =>
+        ustensil.toLowerCase().includes(tagUstensil)
+      )
+    );
   };
-
+  
   return {
     initRecipes,
     initIngredient,
@@ -522,6 +506,7 @@ const initListUstensils = (recettes = false) => {
  */
 const displayListFiltre = (arrayList, idElement) => {
   let htmlListFiltre = "";
+  if (arrayList.length < 1 ) htmlListFiltre = `<span class="tag" tabindex="0">Aucune correspondance ...</span>`;
   arrayList.forEach((element) => {
     htmlListFiltre += `<span class="tag" tabindex="0">${element}</span>`;
   });
@@ -655,13 +640,8 @@ const addTagIngredient = () => {
             tagIngredient.textContent.toLowerCase()
           ) === -1
         ) {
-          if (listTagIngredient.textContent.length === 17) {
             listTagIngredient.innerHTML = `<p class="tag tagIngredient">${tagIngredient.textContent}
                                 <i class="fa-regular fa-circle-xmark"></i></p>`;
-          } else {
-            listTagIngredient.innerHTML += `<p class="tag tagIngredient">${tagIngredient.textContent}
-                            <i class="fa-regular fa-circle-xmark"></i></p>`;
-          }
           factory.initTagIngredient(tagIngredient.textContent.toLowerCase());
           const recetteTagIngredient = factory.filtreRecipeIngredient(
             factory.getRecipes(),
@@ -738,12 +718,9 @@ const addTagAppliance = () => {
         if (arrayListTagAppliance.length === 0 
         || arrayListTagAppliance.indexOf(
             tagAppliance.textContent.toLowerCase()) === -1) {
-          if (listTagAppliance.textContent.length === 15)
-            listTagAppliance.innerHTML = `<p class="tag tagAppliance">${tagAppliance.textContent}
-                                          <i class="fa-regular fa-circle-xmark"></i></p>`;
-          else
-            listTagAppliance.innerHTML += `<p class="tag tagAppliance">${tagAppliance.textContent}
-                                          <i class="fa-regular fa-circle-xmark"></i></p>`;
+              listTagAppliance.innerHTML = 
+                `<p class="tag tagAppliance">${tagAppliance.textContent}
+                <i class="fa-regular fa-circle-xmark"></i></p>`;
           factory.initTagAppliance(tagAppliance.textContent.toLowerCase());
           const recetteTagAppliance = factory.filtreRecipeAppliance(
             factory.getRecipes(),
@@ -817,12 +794,9 @@ const addTagUstensil = () => {
     arrayEvent.forEach((event) => {
       tagUstensil.addEventListener(event, () => {
         const arrayListTagUstensil = factory.getTagUstensils();
-        if (
-          arrayListTagUstensil.length === 0 ||
-          arrayListTagUstensil.indexOf(
-            tagUstensil.textContent.toLowerCase()
-          ) === -1
-        ) {
+        if (arrayListTagUstensil.length === 0 
+        || arrayListTagUstensil.indexOf(
+          tagUstensil.textContent.toLowerCase()) === -1) {
           if (listTagUstensil.textContent.length === 16)
             listTagUstensil.innerHTML = `<p class="tag tagUstensil">${tagUstensil.textContent}
               <i class="fa-regular fa-circle-xmark"></i></p>`;
